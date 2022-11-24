@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20%
+}
+
+.dark-mode {
+  background-color: rgb(6, 1, 26);
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.note.new {
+  background-color: #b2b9b8;
+  position: absolute;
+  width: 15%;
+  left: 20%;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #b2b9b8;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.note-container {
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 20px rgba(130, 130, 130, 0.5);
+}
+
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  overflow: auto;
+  cursor: move;
+}
+
+.note-text {
+  cursor: text;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding:  0 20%;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+
+
+}
+
+.search input:focus {
+  outline: none;
+}
+
+
+.trash {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #aeaeae;
+  opacity: 0.5;
+  bottom: 0;
+  border-radius: 2rem 2rem 0 0;
+  transition: all ease-in-out 0.3s;
+}
+.trash img {
+  width: 2rem;
+  height: 2rem;
+}
